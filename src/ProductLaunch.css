@@ -30,7 +30,7 @@
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.48),
-    rgba(0, 0, 0, 0.08) 55%,
+    rgba(0, 0, 0, 0.38) 55%,
     rgba(0, 0, 0, 0.38)
   );
 }
@@ -155,29 +155,40 @@
 }
 
 .launch-kicker {
-  font-size: 11px;
+  font-size: 25px;
   letter-spacing: 0.25em;
-  color: #e4cf91;
+  color: #fffdf6;
 }
 
 .launch-title h1 {
+  display: table;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+
   margin: 18px 0;
-  font-family: "Cinzel", Georgia, serif;
+  padding: 8px 20px;
+
+  color: #ffffff;
+  font-family: "Poppins", "Times New Roman", serif;
   font-size: clamp(36px, 5.5vw, 82px);
   line-height: 1.04;
   font-weight: 700;
+
   text-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+  overflow-wrap: anywhere;
+  border-radius: 3px;
 }
 
 .launch-rule {
   width: 75px;
   height: 2px;
   margin: 24px 0;
-  background: #e4cf91;
+  background: #fffffd;
 }
 
 .launch-title p {
-  font-size: 12px;
+  font-size: 20px;
   letter-spacing: 0.16em;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.82);
@@ -185,8 +196,9 @@
 
 .launch-bottom-label {
   position: absolute;
-  bottom: 2%;
+  bottom: 5%;
   right: 50%;
+  left: 46%;
   transform: translateX(-50%);
   font-size: 9px;
   letter-spacing: 0.28em;

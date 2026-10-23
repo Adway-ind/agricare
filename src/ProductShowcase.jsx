@@ -16,24 +16,27 @@ import {
 
 const products = [
   {
-    name: "Calciflux",
+    name: "CALCIFLUX",
     image: "/products/product-1.png",
+    titleBg: "#096e1a",
     category: "CALCIUM OXIDE (CaO): 35%",
     description:
       "A concentrated calcium suspension designed to support crop calcium nutrition, fruit development, and produce quality.",
     highlight: "SUPPORTS CROP QUALITY",
   },
   {
-    name: "SupremeK Pro",
+    name: "SUPREMEK PRO",
     image: "/products/product-2.png",
+    titleBg: "#8b0eb1",
     category: "HIGH-POTASSIUM FOLIAR FERTILIZER",
     description:
       "A concentrated potassium formula with micronutrients to support fruit size, colour, sugar content, and overall produce quality.",
     highlight: "POTASSIUM-POWERED NUTRITION",
   },
   {
-    name: "CuraBor",
+    name: "CURA BOR",
     image: "/products/product-3.png",
+    titleBg: "#C07A24",
     category: "SPECIALIST CROP NUTRITION",
     description:
       "A specialist crop nutrition solution. Confirm the product composition and intended use before displaying specific benefits.",
@@ -42,86 +45,97 @@ const products = [
   {
     name: "IntenseZ Pro",
     image: "/products/product-4.png",
+    titleBg: "#2867B2",
     category: "ZINC-ENRICHED NPK FOLIAR FERTILIZER",
     description:
       "An NPK foliar fertilizer with elevated zinc and additional micronutrients to support balanced crop nutrition and crop quality.",
     highlight: "ZINC-FOCUSED NUTRITION",
   },
   {
-    name: "Nutristim+",
+    name: "NUTRISTIM+",
     image: "/products/product-5.png",
+    titleBg: "#86130a",
     category: "PLANT NUTRITION",
     description:
       "A specialist agricultural product. Add the verified formulation and product benefits from the manufacturer's label.",
     highlight: "PRODUCT DETAILS TO BE CONFIRMED",
   },
   {
-    name: "FulviCarb - H",
+    name: "FULVICARB - H",
     image: "/products/product-6.png",
+    titleBg: "#d31212",
     category: "CROP NUTRITION",
     description:
       "A crop nutrition product. Confirm its composition and recommended application from the official product documentation.",
     highlight: "FORMULATION TO BE CONFIRMED",
   },
   {
-    name: "Quiksol",
+    name: "QUIKSOL",
     image: "/products/product-7.png",
+    titleBg: "#e4640f",
     category: "AGRICULTURAL SOLUTION",
     description:
       "A product-specific description can be added once its formulation and intended agricultural use are verified.",
     highlight: "PRODUCT DETAILS TO BE CONFIRMED",
   },
   {
-    name: "CuraPhos",
+    name: "CURAPHOS",
     image: "/products/product-8.png",
+    titleBg: "#6b3305",
     category: "CROP NUTRITION",
     description:
       "A specialist agricultural product. Confirm its phosphorus content, formulation, and intended use before making nutrient claims.",
     highlight: "FORMULATION TO BE CONFIRMED",
   },
   {
-    name: "Xcell",
+    name: "XCELL",
     image: "/products/product-9.png",
+    titleBg: "#51b42a",
     category: "AGRICULTURAL SOLUTION",
     description:
       "Add the verified product description and key benefits from the official manufacturer documentation.",
     highlight: "PRODUCT DETAILS TO BE CONFIRMED",
   },
   {
-    name: "Calcizinc",
+    name: "CALCIZINC",
     image: "/products/product-10.png",
+    titleBg: "#28690f",
     category: "CROP NUTRITION",
     description:
       "Confirm the calcium and zinc composition and intended use from the product label before publishing specific benefits.",
     highlight: "NUTRIENT PROFILE TO BE CONFIRMED",
   },
   {
-    name: "Combi2",
+    name: "COMBI2",
     image: "/products/product-11.png",
+    titleBg: "#ce2323",
     category: "AGRICULTURAL SOLUTION",
     description:
       "Add the verified nutrient composition and product benefits from the manufacturer's technical information.",
     highlight: "PRODUCT DETAILS TO BE CONFIRMED",
   },
   {
-    name: "Magnit",
+    name: "MAGNIT",
     image: "/products/product-12.png",
+    titleBg: "#094ae2",
     category: "CROP NUTRITION",
     description:
       "Confirm the product's nutrient composition and intended agricultural use before displaying technical claims.",
     highlight: "FORMULATION TO BE CONFIRMED",
   },
   {
-    name: "Potassium Schoenite",
+    name: "POTASSIUMSCHOENITE",
     image: "/products/product-13.png",
+    titleBg: "#5d8b07",
     category: "POTASSIUM AND MAGNESIUM NUTRITION",
     description:
       "A potassium-magnesium sulfate mineral fertilizer. Verify the grade and nutrient analysis of your specific product before displaying percentages.",
     highlight: "POTASSIUM & MAGNESIUM",
   },
   {
-    name: "OroSol",
+    name: "OROSOL",
     image: "/products/product-14.png",
+    titleBg: "#3218c4",
     category: "AGRICULTURAL SOLUTION",
     description:
       "Add the verified formulation, intended use, and key benefits from the official product documentation.",
@@ -216,6 +230,22 @@ export default function ProductShowcase() {
       onMouseMove={revealControls}
       onTouchStart={revealControls}
     >
+      {/* Premium logo header */}
+      <header className="showcase__header">
+        <div className="showcase__header-logo showcase__header-logo--left">
+          <img src="/public/products/Logo-02.png" alt="Company Logo" />
+        </div>
+
+        <div className="showcase__header-center">
+          <span>PREMIUM AGRICULTURAL SOLUTIONS</span>
+          <div className="showcase__header-line" />
+        </div>
+
+        <div className="showcase__header-logo showcase__header-logo--right">
+          <img src="/public/products/Logo-03.png" alt="Brand Logo" />
+        </div>
+      </header>
+
       <div className="showcase__image-fallback" aria-hidden="true" />
 
       <video
@@ -254,12 +284,6 @@ export default function ProductShowcase() {
         />
       </div>
 
-      {/* Animated product information */}
-
-      {/* Product title at the top center */}
-
-      {/* Product details at the bottom */}
-
       {/* Product information — positioned to match the reference image */}
       <section
         key={`info-${activeIndex}`}
@@ -271,7 +295,13 @@ export default function ProductShowcase() {
           <span className="showcase__callout-label">
             PRECISION CROP NUTRITION
           </span>
-          <h1>{activeProduct.name}</h1>
+          <h1
+            style={{
+              backgroundColor: activeProduct.titleBg || "#215c32",
+            }}
+          >
+            {activeProduct.name}
+          </h1>
 
           <div className="showcase__product-subinfo">
             <span className="showcase__details-heading" aria-hidden="true" />

@@ -4,19 +4,20 @@ import { ChevronLeft, ChevronRight, Maximize, Pause, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./ProductLaunch.css";
 
-
 const products = [
   {
     name: "FulviCarb - H",
     category: "CROP NUTRITION",
     image: "/products/product-6.png",
     subtitle: "PRECISION CROP NUTRITION",
+    titleBg: "#d8291d", // Premium gold
   },
   {
     name: "Nutristim+",
     category: "PLANT NUTRITION",
     image: "/products/product-5.png",
     subtitle: "POWERING CROP PERFORMANCE",
+    titleBg: "#830606", // Agricultural green
   },
 ];
 
@@ -112,15 +113,20 @@ export default function ProductLaunch() {
 
         <div className="launch-title">
           <span className="launch-kicker">{product.subtitle}</span>
-          <h1>{product.name}</h1>
+
+          <h1
+            style={{
+              backgroundColor: product.titleBg,
+            }}
+          >
+            {product.name}
+          </h1>
+
           <div className="launch-rule" />
           <p>{product.category}</p>
         </div>
-
-        <div className="launch-bottom-label">
-          INNOVATION · NUTRITION · GROWTH
-        </div>
       </section>
+      <div className="launch-bottom-label">INNOVATION · NUTRITION · GROWTH</div>
 
       <nav className="launch-controls" aria-label="Launch controls">
         <button
