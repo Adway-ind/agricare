@@ -255,7 +255,7 @@ export default function ProductShowcase() {
         </div>
 
         <div className="showcase__header-center">
-          <span>PREMIUM AGRICULTURAL SOLUTIONS</span>
+          <span>PREMIUM AGRI SOLUTIONS</span>
           <div className="showcase__header-line" />
         </div>
 
