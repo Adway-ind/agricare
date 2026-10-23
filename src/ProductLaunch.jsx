@@ -3,19 +3,23 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Maximize, Pause, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./ProductLaunch.css";
+import naturePodium from "./assets/images/nature-podium.png";
+import launchVideo from "./assets/videos/v.mp4";
+import product5 from "./assets/products/product-5.png";
+import product6 from "./assets/products/product-6.png";
 
 const products = [
   {
     name: "FulviCarb - H",
     category: "CROP NUTRITION",
-    image: "/products/product-6.png",
+    image: product6,
     subtitle: "PRECISION CROP NUTRITION",
     titleBg: "#d8291d", // Premium gold
   },
   {
     name: "Nutristim+",
     category: "PLANT NUTRITION",
-    image: "/products/product-5.png",
+    image: product5,
     subtitle: "POWERING CROP PERFORMANCE",
     titleBg: "#830606", // Agricultural green
   },
@@ -75,9 +79,9 @@ export default function ProductLaunch() {
         muted
         loop
         playsInline
-        poster="/images/nature-podium.png"
+        poster={naturePodium}
       >
-        <source src="/videos/v.mp4" type="video/mp4" />
+        <source src={launchVideo} type="video/mp4" />
       </video>
 
       <div className="launch-overlay" />

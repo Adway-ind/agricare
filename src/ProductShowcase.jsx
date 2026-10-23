@@ -2,6 +2,24 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
+import companyLogo from "./assets/images/Logo-02.png";
+import brandLogo from "./assets/images/Logo-03.png";
+import naturePodium from "./assets/images/nature-podium.png";
+import showcaseVideo from "./assets/videos/v.mp4";
+import product1 from "./assets/products/product-1.png";
+import product2 from "./assets/products/product-2.png";
+import product3 from "./assets/products/product-3.png";
+import product4 from "./assets/products/product-4.png";
+import product5 from "./assets/products/product-5.png";
+import product6 from "./assets/products/product-6.png";
+import product7 from "./assets/products/product-7.png";
+import product8 from "./assets/products/product-8.png";
+import product9 from "./assets/products/product-9.png";
+import product10 from "./assets/products/product-10.png";
+import product11 from "./assets/products/product-11.png";
+import product12 from "./assets/products/product-12.png";
+import product13 from "./assets/products/product-13.png";
+import product14 from "./assets/products/product-14.png";
 
 import {
   ChevronLeft,
@@ -17,7 +35,7 @@ import {
 const products = [
   {
     name: "CALCIFLUX",
-    image: "/products/product-1.png",
+    image: product1,
     titleBg: "#096e1a",
     category: "CALCIUM OXIDE (CaO): 35%",
     description:
@@ -26,7 +44,7 @@ const products = [
   },
   {
     name: "SUPREMEK PRO",
-    image: "/products/product-2.png",
+    image: product2,
     titleBg: "#8b0eb1",
     category: "HIGH-POTASSIUM FOLIAR FERTILIZER",
     description:
@@ -35,7 +53,7 @@ const products = [
   },
   {
     name: "CURA BOR",
-    image: "/products/product-3.png",
+    image: product3,
     titleBg: "#C07A24",
     category: "SPECIALIST CROP NUTRITION",
     description:
@@ -44,7 +62,7 @@ const products = [
   },
   {
     name: "IntenseZ Pro",
-    image: "/products/product-4.png",
+    image: product4,
     titleBg: "#2867B2",
     category: "ZINC-ENRICHED NPK FOLIAR FERTILIZER",
     description:
@@ -53,7 +71,7 @@ const products = [
   },
   {
     name: "NUTRISTIM+",
-    image: "/products/product-5.png",
+    image: product5,
     titleBg: "#86130a",
     category: "PLANT NUTRITION",
     description:
@@ -62,7 +80,7 @@ const products = [
   },
   {
     name: "FULVICARB - H",
-    image: "/products/product-6.png",
+    image: product6,
     titleBg: "#d31212",
     category: "CROP NUTRITION",
     description:
@@ -71,7 +89,7 @@ const products = [
   },
   {
     name: "QUIKSOL",
-    image: "/products/product-7.png",
+    image: product7,
     titleBg: "#e4640f",
     category: "AGRICULTURAL SOLUTION",
     description:
@@ -80,7 +98,7 @@ const products = [
   },
   {
     name: "CURAPHOS",
-    image: "/products/product-8.png",
+    image: product8,
     titleBg: "#6b3305",
     category: "CROP NUTRITION",
     description:
@@ -89,7 +107,7 @@ const products = [
   },
   {
     name: "XCELL",
-    image: "/products/product-9.png",
+    image: product9,
     titleBg: "#51b42a",
     category: "AGRICULTURAL SOLUTION",
     description:
@@ -98,7 +116,7 @@ const products = [
   },
   {
     name: "CALCIZINC",
-    image: "/products/product-10.png",
+    image: product10,
     titleBg: "#28690f",
     category: "CROP NUTRITION",
     description:
@@ -107,7 +125,7 @@ const products = [
   },
   {
     name: "COMBI2",
-    image: "/products/product-11.png",
+    image: product11,
     titleBg: "#ce2323",
     category: "AGRICULTURAL SOLUTION",
     description:
@@ -116,7 +134,7 @@ const products = [
   },
   {
     name: "MAGNIT",
-    image: "/products/product-12.png",
+    image: product12,
     titleBg: "#094ae2",
     category: "CROP NUTRITION",
     description:
@@ -125,7 +143,7 @@ const products = [
   },
   {
     name: "POTASSIUMSCHOENITE",
-    image: "/products/product-13.png",
+    image: product13,
     titleBg: "#5d8b07",
     category: "POTASSIUM AND MAGNESIUM NUTRITION",
     description:
@@ -134,7 +152,7 @@ const products = [
   },
   {
     name: "OROSOL",
-    image: "/products/product-14.png",
+    image: product14,
     titleBg: "#3218c4",
     category: "AGRICULTURAL SOLUTION",
     description:
@@ -233,7 +251,7 @@ export default function ProductShowcase() {
       {/* Premium logo header */}
       <header className="showcase__header">
         <div className="showcase__header-logo showcase__header-logo--left">
-          <img src="/public/products/Logo-02.png" alt="Company Logo" />
+          <img src={companyLogo} alt="Company Logo" />
         </div>
 
         <div className="showcase__header-center">
@@ -242,7 +260,7 @@ export default function ProductShowcase() {
         </div>
 
         <div className="showcase__header-logo showcase__header-logo--right">
-          <img src="/public/products/Logo-03.png" alt="Brand Logo" />
+          <img src={brandLogo} alt="Brand Logo" />
         </div>
       </header>
 
@@ -254,9 +272,9 @@ export default function ProductShowcase() {
         muted
         loop
         playsInline
-        poster="/images/nature-podium.png"
+        poster={naturePodium}
       >
-        <source src="/videos/v.mp4" type="video/mp4" />
+        <source src={showcaseVideo} type="video/mp4" />
       </video>
 
       <div className="showcase__shade" aria-hidden="true" />

@@ -81,7 +81,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: url("/images/nature-podium.png") center / cover no-repeat;
+  background: url("./assets/images/nature-podium.png") center / cover no-repeat;
   pointer-events: none;
 }
 .showcase__video {
@@ -99,7 +99,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: url("/images/nature-podium.png") center / cover no-repeat;
+  background: url("./assets/images/nature-podium.png") center / cover no-repeat;
   pointer-events: none;
 }
 
@@ -719,6 +719,21 @@ body {
 }
 
 @media (max-width: 480px) {
+  .showcase__header {
+    top: 16px;
+    width: 94%;
+  }
+  .showcase__header-logo img {
+    max-width: 48px;
+    height: 32px;
+  }
+  .showcase__header-center span {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+  .showcase__header-line {
+    margin-top: 7px;
+  }
   .showcase__title-callout {
     top: 18%;
     left: 45%;
