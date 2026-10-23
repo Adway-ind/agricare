@@ -1,0 +1,343 @@
+
+.launch-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 560px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #07110c;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.launch-background,
+.launch-overlay,
+.launch-vignette {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.launch-background {
+  z-index: -3;
+  object-fit: cover;
+}
+
+.launch-overlay {
+  z-index: -2;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.48),
+    rgba(0, 0, 0, 0.08) 55%,
+    rgba(0, 0, 0, 0.38)
+  );
+}
+
+.launch-vignette {
+  z-index: -1;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 20%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+.launch-header {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 0.2em;
+  font-size: 11px;
+}
+
+.launch-eyebrow {
+  color: #e6d4a2;
+}
+
+.launch-index {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.launch-index i {
+  width: 35px;
+  height: 1px;
+  background: #d7c28c;
+}
+
+.launch-stage {
+  position: absolute;
+  inset: 12% 0 9%;
+}
+
+.launch-product {
+  position: absolute;
+  left: 35%;
+  top: 49%;
+  height: 76%;
+  width: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  clip-path: inset(100% 0 0 0);
+}
+
+.launch-product img {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.5));
+}
+
+.launch-product-glow {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  background: rgba(228, 204, 130, 0.16);
+  filter: blur(65px);
+}
+
+.launch-light-beam {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 18%;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 235, 0.28),
+    rgba(230, 205, 139, 0.12),
+    transparent
+  );
+  transform: translateX(-120%) skewX(-12deg);
+}
+
+.launch-energy-sweep {
+  position: absolute;
+  z-index: 3;
+  top: 10%;
+  bottom: 10%;
+  left: 0;
+  width: 3px;
+  opacity: 0;
+  pointer-events: none;
+  background: #f7e9bd;
+  box-shadow:
+    0 0 12px #fff2c9,
+    0 0 35px rgba(236, 201, 119, 0.9);
+}
+
+.launch-title {
+  position: absolute;
+  z-index: 4;
+  top: 35%;
+  right:20%;
+  width: 34%;
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.launch-kicker {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: #e4cf91;
+}
+
+.launch-title h1 {
+  margin: 18px 0;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(36px, 5.5vw, 82px);
+  line-height: 1.04;
+  font-weight: 700;
+  text-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+}
+
+.launch-rule {
+  width: 75px;
+  height: 2px;
+  margin: 24px 0;
+  background: #e4cf91;
+}
+
+.launch-title p {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.launch-bottom-label {
+  position: absolute;
+  bottom: 2%;
+  right: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.launch-active .launch-product {
+  animation: launch-product-reveal 1.8s cubic-bezier(.2,.75,.25,1) forwards;
+}
+
+.launch-active .launch-product-glow {
+  animation: launch-glow 2s ease-out both;
+}
+
+.launch-active .launch-light-beam {
+  animation: launch-beam 1.5s ease-in-out 0.2s both;
+}
+
+.launch-active .launch-energy-sweep {
+  animation: launch-sweep 1.4s ease-in-out 0.25s both;
+}
+
+.launch-active .launch-title {
+  animation: launch-title-reveal 1s ease-out 0.7s forwards;
+}
+
+.launch-controls {
+  position: absolute;
+  right: 4%;
+  bottom: 5%;
+  display: flex;
+  gap: 10px;
+}
+
+.launch-controls button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.24);
+  color: white;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.launch-controls button:hover {
+  background: rgba(218, 194, 133, 0.25);
+  border-color: #e4cf91;
+}
+
+.launch-controls svg {
+  width: 19px;
+  height: 19px;
+}
+
+@keyframes launch-product-reveal {
+  0% {
+    opacity: 0;
+    clip-path: inset(100% 0 0 0);
+    transform: translate(-50%, calc(-50% + 22px));
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes launch-glow {
+  0% { opacity: 0; transform: scale(.65); }
+  65% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: .65; transform: scale(1); }
+}
+
+@keyframes launch-beam {
+  0% { opacity: 0; transform: translateX(-120%) skewX(-12deg); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(650%) skewX(-12deg); }
+}
+
+@keyframes launch-sweep {
+  0% { opacity: 0; transform: translateX(-10px); }
+  15% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(100vw); }
+}
+
+@keyframes launch-title-reveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 700px) {
+  .launch-title {
+    top: 8%;
+    left: 7%;
+    width: 86%;
+  }
+
+  .launch-title h1 {
+    font-size: clamp(36px, 10vw, 60px);
+  }
+
+  .launch-product {
+    top: 60%;
+    height: 57%;
+    width: 80%;
+  }
+
+  .launch-controls {
+    right: 5%;
+    bottom: 4%;
+  }
+
+  .launch-header {
+    top: 3%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .launch-active .launch-product,
+  .launch-active .launch-product-glow,
+  .launch-active .launch-light-beam,
+  .launch-active .launch-energy-sweep,
+  .launch-active .launch-title {
+    animation-duration: 0.01ms;
+  }
+}
+
+.showcase__launch-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  min-height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.showcase__launch-link:hover {
+  background: rgba(218, 194, 133, 0.25);
+  border-color: #e4cf91;
+}
