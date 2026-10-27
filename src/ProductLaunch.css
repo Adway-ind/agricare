@@ -80,7 +80,7 @@
 .launch-product {
   position: absolute;
   left: 35%;
-  top: 49%;
+  top: 32%;
   height: 76%;
   width: 40%;
   transform: translate(-50%, -50%);
@@ -352,4 +352,55 @@
 .showcase__launch-link:hover {
   background: rgba(218, 194, 133, 0.25);
   border-color: #e4cf91;
+}
+
+
+.launch-music-controller {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+}
+
+.launch-music-controller button {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  color: #fff;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.launch-music-controller button svg {
+  width: 19px;
+  height: 19px;
+}
+
+.launch-music-controller input[type="range"] {
+  width: 75px;
+  accent-color: #c9a45c;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .launch-music-controller {
+    gap: 3px;
+    padding: 4px 6px;
+  }
+
+  .launch-music-controller button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .launch-music-controller input[type="range"] {
+    width: 48px;
+  }
 }

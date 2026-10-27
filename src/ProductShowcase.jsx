@@ -69,24 +69,24 @@ const products = [
       "An NPK foliar fertilizer with elevated zinc and additional micronutrients to support balanced crop nutrition and crop quality.",
     highlight: "ZINC-FOCUSED NUTRITION",
   },
-  {
-    name: "NUTRISTIM+",
-    image: product5,
-    titleBg: "#86130a",
-    category: "PLANT NUTRITION",
-    description:
-      "A specialist agricultural product. Add the verified formulation and product benefits from the manufacturer's label.",
-    highlight: "PRODUCT DETAILS TO BE CONFIRMED",
-  },
-  {
-    name: "FULVICARB - H",
-    image: product6,
-    titleBg: "#d31212",
-    category: "CROP NUTRITION",
-    description:
-      "A crop nutrition product. Confirm its composition and recommended application from the official product documentation.",
-    highlight: "FORMULATION TO BE CONFIRMED",
-  },
+  // {
+  //   name: "NUTRISTIM+",
+  //   image: product5,
+  //   titleBg: "#86130a",
+  //   category: "PLANT NUTRITION",
+  //   description:
+  //     "A specialist agricultural product. Add the verified formulation and product benefits from the manufacturer's label.",
+  //   highlight: "PRODUCT DETAILS TO BE CONFIRMED",
+  // },
+  // {
+  //   name: "FULVICARB - H",
+  //   image: product6,
+  //   titleBg: "#d31212",
+  //   category: "CROP NUTRITION",
+  //   description:
+  //     "A crop nutrition product. Confirm its composition and recommended application from the official product documentation.",
+  //   highlight: "FORMULATION TO BE CONFIRMED",
+  // },
   {
     name: "QUIKSOL",
     image: product7,
